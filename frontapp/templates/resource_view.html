@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% load user_filters %}
+
+{% block title %}
+{{ post.title}}
+{% endblock title%}
+
+{% block content %}
+<div class="">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <img src="{{ post.cover_image.url }}" class="img-fluid rounded my-4" alt="{{ post.title }}">
+            <h1>{{ post.title }}</h1>
+            <div class='container rounded text-body-emphasis bg-body-light'>
+                {{ post.content | safe}}
+            </div>
+        </div>
+
+        {% if request.user|is_member_of:"Content Writer" or request.user.is_superuser %}
+        <div class="text-center mt-3">
+            <a href='{% url 'edit_post' post.slug %}' class="btn btn-outline-primary">Edit</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock content %}
+

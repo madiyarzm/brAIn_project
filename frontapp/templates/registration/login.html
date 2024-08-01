@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block tittle %}
+Resources
+{% endblock tittle %}
+
+{% block content %}
+<main class="form-signin container m-auto" style="width: 400px;">
+    <form method="post">
+        {% csrf_token %}
+    <div class="d-flex justify-content-center">
+      <img class=" mb-4" src="{% static 'brain_logo.png' %}" alt="" width="200" height="70">
+    </div>
+      <div class="form-floating mt-5">
+        <input type="text" class="form-control" id="id_username1" name="username" placeholder="johndoe">
+        <label for="username">username</label>
+      </div>
+      <div class="form-floating mt-1">
+        <input type="password" class="form-control" id="id_password1" placeholder="Password" name="password">
+        <label for="password">Password</label>
+      </div>
+  
+      <button class="btn btn-primary w-100 py-2 mt-3" type="submit" fdprocessedid="nr0cn">Sign in</button>
+      <p class="mt-5 mb-3 text-body-secondary">© 2024</p>
+    </form>
+  </main>{% endblock content %}

@@ -1,0 +1,154 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block content %}
+
+<section class="bg-light py-5">
+	<div class="container">
+		<div class="row gx-4 align-items-center">
+			<div class="col-md-6">
+				<div class="me-md-2 me-lg-5"><img class="img-fluid rounded-3" src="{% static 'mady_w_filip.jpeg' %}"></div>
+			</div>
+			<div class="col-md-6">
+				<div class="ms-md-2 ms-lg-5 mt-5 mt-md-0">
+					<span>Bay Area @Silkroad Innovation Hub</span>
+					<h1 class="display-3 fw-bold mb-0">brAIn is</h1>
+					<h1 class="display-3 fw-bold text-danger">Free. Fun. & Exciting</h1>
+					<p class="lead">
+                        <code>
+                            #Libraries <br />
+                            import Fun <br />
+                            import learning <br />
+                            import Networking <br />
+                        </code>
+                    </p><a class="btn btn-lg btn-primary" href="{% url "contact_us" %}">Learn More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+  <div class="p-5 mb-4 bg-body-tertiary rounded-3 mt-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">AI for <label class="text-danger">Everyone</label>, Everywhere</h1>
+      <p class="col-md-8 fs-4">Join us on a mission to democratize AI education and provide unparalleled learning and networking opportunities across the globe. Our free events and monthly newsletter bring together thought leaders, industry experts, and AI enthusiasts to share practical insights and real-world applications of artificial intelligence.</p>
+{% comment %}<button class="btn btn-primary btn-lg" type="button">Learn More</button>{% endcomment %} 
+</div>
+  </div>
+
+
+  <div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Our Chapters</h2>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://www.sftravel.com/sites/default/files/styles/hero/public/2022-09/san-francisco-skyline-from-the-air.jpg.webp?itok=xxwQpkgj');background-size: cover; background-position: center;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Bay Area</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              {% comment %} <li class="me-auto">
+                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white" />
+              </li> {% endcomment %}
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+                <small>United States</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#calendar3"></use>
+                </svg>
+                <small>April, 2024</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://cdn.britannica.com/14/130914-050-3288D3B0/Taipei-101-building-Taiwan.jpg');background-size: cover; background-position: center; filter:saturate(1.3)">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Taipei</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              {% comment %} <li class="me-auto">
+                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white" />
+              </li> {% endcomment %}
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+                <small>Taiwan</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#calendar3"></use>
+                </svg>
+                <small>November, 2024</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://images.unsplash.com/photo-1554310603-d39d43033735?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');background-size: cover; background-position: center; filter:contrast(1.1)">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Seoul</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              {% comment %} <li class="me-auto">
+                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white" />
+              </li> {% endcomment %}
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+                <small>South Korea</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#calendar3"></use>
+                </svg>
+                <small>March, 2025</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fa/Faisal_Masjid_From_Damn_e_koh.jpg');background-size: cover; background-position: center;">
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Islamabad</h3>
+            <ul class="d-flex list-unstyled mt-auto">
+              {% comment %} <li class="me-auto">
+                <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white" />
+              </li> {% endcomment %}
+              <li class="d-flex align-items-center me-3">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#geo-fill"></use>
+                </svg>
+                <small>Pakistan</small>
+              </li>
+              <li class="d-flex align-items-center">
+                <svg class="bi me-2" width="1em" height="1em">
+                  <use xlink:href="#calendar3"></use>
+                </svg>
+                <small>July, 2025</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

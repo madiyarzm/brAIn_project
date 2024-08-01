@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% load user_filters %}
+
+{% block title %}
+Dashboard
+{% endblock title %}
+
+{% block content %}
+<h1>
+    Welcome to the BrAIn Team Dashboard
+</h1>
+<p>
+    Use the Following link to access the BrAIn team webmail.
+</p>
+<a href="/webmail/" class="btn btn-warning">
+    Webmail
+</a>
+<hr>
+
+{% if request.user|is_member_of:"Content Writer" or request.user.is_superuser %}
+<h3>
+    Content Management System
+</h3>
+<br>
+<a href="{% url "create_post" %}" class="text-primary">Create a Post</a> |
+<a href="{% url "resources" %}" class="text-primary">Go to Resources</a>
+
+<table class="table table-hover thead-dark mt-5">
+    <thead class="table-dark">
+        <tr>
+            <th> # </th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for post in posts %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.category }}</td>
+        <td>{{ post.status }}</td>
+        <td>
+            {% comment %} <a href="{% url 'delete_post' post.slug %}" class="btn btn-outline-danger">Delete</a> {% endcomment %}
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="{% url 'resource_view' post.slug %}" class=" dropdown-item ">View</a></li>
+                  <li><a href="{% url 'edit_post' post.slug %}" class=" dropdown-item ">Edit</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a href="{% url 'delete_post' post.slug %}" class=" dropdown-item text-danger">Delete</a></li>
+                </ul>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endif %}
+
+{% endblock content %}

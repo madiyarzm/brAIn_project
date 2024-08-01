@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Contact Us
+{% endblock title %}
+
+{% block content %}
+<section class="py-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				{% comment %} <span class="text-muted">Our Story</span> {% endcomment %}
+				<h2 class="display-5 fw-bold text-danger">Contact Us</h2>
+				<p class="lead">Feel free to use the following channels, we always love to hear feeback to improve :)</p>
+                <a class="btn btn-primary mt-2" href="{% url "linkedIn" %}">LinkedIn</a> <a class="btn btn-primary mt-2" href="mailto:hello@attendbrain.com">hello@attendbrain.com</a>
+			</div>
+			<div class="col-md-6 offset-md-1">
+				<p class="lead">Have questions or want to learn more about brAIn? We’re here to help! Whether you’re interested in attending our events, subscribing to our newsletter, exploring sponsorship opportunities, or simply want to connect, we’d love to hear from you.</p>
+				<p class="lead">Reach out to us and we’ll get back to you as soon as possible. Join us on our mission to make AI education accessible to everyone, everywhere!</p>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}
+
+
+
+
+
+
+
+
